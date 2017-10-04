@@ -1,0 +1,38 @@
+MAIN_DIALOG_TITLE Nouse
+RECALIBRATE Recalibrate
+ENABLE Enable
+DISABLE Disable
+EXIT Exit
+SETTINGS Settings
+PAUSE Pause
+UNPAUSE Unpause
+NOUSEBOARD NouseBoard
+COULD_NOT_INITIALIZE_WEBCAM Could not initialize webcam.
+DWELL_DIALOG_TITLE Dwell Clicking
+LEFT_CLICK Left Click
+RIGHT_CLICK Right Click
+DOUBLE_CLICK_BUTTON Double Click
+DRAG Drag
+NOUSEPAD_DIALOG_TITLE NousePad
+NOUSE_TRIAL_INFO Nouse Trial Info
+NOUSE_TRADEMARK Nouse® is a registered trademark of the National Research Council of Canada used under license to IVIM Inc. (US Patents: 10/201,957, 10/653,090. Canadian patents: #2,395,886, #2,440,015).
+DAYS_LEFT_IN_TRIAL Days left in trial: 
+TRIAL_EXPIRED Your evaluation period expired. You may continue running the Nouse software, however the clicking funtionality is now disabled. Please visit Nouse website (www.nouse.ca) to purchase the License Key to activate back the full functionality of the Nouse software.
+NOUSEBOARD_DIALOG_TITLE NouseBoard
+NOUSE_CURSOR NouseCursor
+CREATION_FAILED Creation Failed 
+LEAVE Leave
+STILL BeStill
+RESET Reset
+CENTER Center
+PAUSED paused
+BOARD board
+DIRECT direct
+JOYSTICK joystick
+MOUSE mouse
+DISCRETE discrete
+TYPE Type!
+CLICK Click!
+WARNING_CAPTION Are you sure?
+DISABLE_WARNING Are you sure you want to disable?
+EXIT_WARNING Are you sure you want to exit?

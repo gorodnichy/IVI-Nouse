@@ -1,0 +1,5 @@
+Took out center click
+Nouseboard is always with NousePad
+	No more move board
+	No more full calibration
+No voice

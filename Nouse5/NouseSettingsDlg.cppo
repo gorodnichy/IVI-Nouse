@@ -1,0 +1,147 @@
+// NouseSettingsDlg.cpp : implementation file
+//
+
+#include "stdafx.h"
+#include "Nouse5.h"
+#include "NouseSettingsDlg.h"
+#include "AdvancedSettings.h"
+#include "afxdialogex.h"
+
+
+// CNouseSettingsDlg dialog
+
+//IMPLEMENT_DYNAMIC(CNouseSettingsDlg, CDialog)
+
+CNouseSettingsDlg::CNouseSettingsDlg(CWnd* pParent, CStateCursor* p_stateCursor)
+	: CDialog(CNouseSettingsDlg::IDD, pParent)
+{
+	m_pstateCursor = NULL;
+	//initialize default values
+	m_nCursorSize = 2;
+	m_nCursorSpeed = 1;
+	m_nCountdownCalibration = 3;
+	m_nCountdownDwell = 2;
+	m_nEnableYellowState = 1;
+	m_nNavigationType = 1;
+	m_nMotionRangeHorizontal = 5;
+	m_nMotionRangeVertical = 51;
+	m_nResolutionPixels = 3;
+	m_nResolutionSeconds = 1;
+	m_nUserFaceDetection = 1;
+	m_nLightNormalization = 0;
+	m_nEnableAutoRecalibration = 1;
+	m_nEnableSounds = 1;
+}
+
+CNouseSettingsDlg::~CNouseSettingsDlg()
+{
+}
+
+
+
+// CNouse5Dlg message handlers
+BOOL CNouseSettingsDlg::OnInitDialog()
+{
+	if (!CDialog::OnInitDialog())
+		return FALSE;
+	m_sldr_CursorSize.SetRange(0, 10);
+//	m_sldr_CursorSize.SetTic(1);
+	m_sldr_CursorSpeed.SetRange(0, 10);
+	m_sldr_CountdownCaliberTime.SetRange(0, 20);
+	m_sldr_CountdownDwellTime.SetRange(0, 10);
+	m_sldr_VerticalMotionRange.SetRange(0, 15);
+	m_sldr_HorizontalMotionRange.SetRange(0, 15);
+	m_sldr_ResolitionPixels.SetRange(0, 10);
+	m_sldr_ResolitionSeconds.SetRange(0, 3);
+	/////////////////////////////
+	m_SettingsHandler.updateFromFile();
+	//initialize default values
+	m_nCursorSize = m_SettingsHandler.m_nCursorSize;
+	m_nCursorSpeed = m_SettingsHandler.m_stateCursor.m_nouseControl.m_nCursorSpeed;
+	m_nCountdownCalibration = m_SettingsHandler.m_stateCalibration.m_nCountCalibrateSelect;
+	m_nCountdownDwell = m_SettingsHandler.m_stateCursor.m_nCountDwell;
+	m_nEnableYellowState = m_SettingsHandler.m_stateCursor.m_bEnableYellowState;
+	m_nNavigationType = m_SettingsHandler.m_stateCursor.m_nouseControl.m_eGeneralControlMode;
+	m_nMotionRangeHorizontal = m_SettingsHandler.m_stateCursor.m_nouseControl.m_nMotionRangeHorizontal;
+	m_nMotionRangeVertical = m_SettingsHandler.m_stateCursor.m_nouseControl.m_nMotionRangeVertical;
+	m_nResolutionPixels = m_SettingsHandler.m_stateCursor.m_nResolutionInPixels;
+	m_nResolutionSeconds = m_SettingsHandler.m_stateCursor.m_nResolutionInSeconds;
+	m_nUserFaceDetection = m_SettingsHandler.m_stateReady.m_bActWithFaceDetection;
+	m_nLightNormalization = m_SettingsHandler.m_bUseLightNormalization;
+	m_nEnableAutoRecalibration = m_SettingsHandler.m_stateCursor.m_bUseAutoRecalibration;
+	m_nEnableSounds = m_SettingsHandler.m_bEnableSounds;
+	UpdateData();
+
+	return TRUE;
+
+}
+void CNouseSettingsDlg::DoDataExchange(CDataExchange* pDX)
+{
+	CDialog::DoDataExchange(pDX);
+
+/*	DDX_Control(pDX, IDC_CURSOR_SIZE_SLIDER, m_sldr_CursorSize);
+	DDX_Control(pDX, IDC_CURSOR_SPEED_SLIDER, m_sldr_CursorSpeed);
+	DDX_Control(pDX, IDC_COWNT_CALIB_TIME_SLIDER, m_sldr_CountdownCaliberTime);
+	DDX_Control(pDX, IDC_COWNT_DWELL_TIME_SLIDER, m_sldr_CountdownDwellTime);
+	DDX_Control(pDX, IDC_HORZ_RANGE_SLIDER, m_sldr_HorizontalMotionRange);
+	DDX_Control(pDX, IDC_VERT_RANGE_SLIDER, m_sldr_VerticalMotionRange);
+	DDX_Control(pDX, IDC_RES_PIXELS_SLIDER, m_sldr_ResolitionPixels);
+	DDX_Control(pDX, IDC_RES_SEC_SLIDER, m_sldr_ResolitionSeconds);*/
+	
+		DDX_Slider(pDX, IDC_CURSOR_SIZE_SLIDER, m_nCursorSize);
+		DDX_Slider(pDX, IDC_CURSOR_SPEED_SLIDER, m_nCursorSpeed);
+		DDX_Slider(pDX, IDC_COWNT_CALIB_TIME_SLIDER, m_nCountdownCalibration);
+		DDX_Slider(pDX, IDC_COWNT_DWELL_TIME_SLIDER, m_nCountdownDwell);
+		DDX_Slider(pDX, IDC_HORZ_RANGE_SLIDER, m_nMotionRangeHorizontal);
+		DDX_Slider(pDX, IDC_VERT_RANGE_SLIDER, m_nMotionRangeVertical);
+		DDX_Slider(pDX, IDC_RES_PIXELS_SLIDER, m_nResolutionPixels);
+		DDX_Slider(pDX, IDC_RES_SEC_SLIDER, m_nResolutionSeconds);
+	
+		DDX_Check(pDX, IDC_ENABLE_Y_STATE_CHECK, m_nEnableYellowState);
+		DDX_Check(pDX, IDC_LIGHT_NORM_CHECK, m_nLightNormalization);
+		DDX_Check(pDX, IDC_USER_FACE_DETEC_CHECK, m_nUserFaceDetection);
+		DDX_Check(pDX, IDC_ENABLE_SOUNDS_CHECK, m_nEnableSounds);
+		DDX_Check(pDX, IDC_LIGHT_NORM_CHECK, m_nLightNormalization);
+
+		DDX_Radio(pDX, IDC_JOYSTK_RADIO, m_nNavigationType);	
+}
+
+
+BEGIN_MESSAGE_MAP(CNouseSettingsDlg, CDialog)
+	ON_BN_CLICKED(IDC_SAVE_SETTINGS_BUTTON, &CNouseSettingsDlg::OnClickedSaveSettingsButton)
+	ON_BN_CLICKED(IDC_EXIT_BUTTON, &CNouseSettingsDlg::OnClickedExitButton)
+	ON_BN_CLICKED(IDC_ADVANCE_SETTTING_BUTTON, &CNouseSettingsDlg::OnClickedAdvanceSetttingButton)
+END_MESSAGE_MAP()
+
+// CNouseSettingsDlg message handlers
+void CNouseSettingsDlg::OnClickedExitButton()
+{
+	
+}
+
+
+void CNouseSettingsDlg::OnClickedSaveSettingsButton()
+{
+	UpdateData();
+}
+
+
+void CNouseSettingsDlg::OnClickedAdvanceSetttingButton()
+{
+	CAdvancedSettings dlg;// = new CAdvancedSettings();
+	INT_PTR nResponse = dlg.DoModal();//dima just for trial
+									  /*
+									  if (nResponse == IDOK)
+									  {
+									  // TODO: Place code here to handle when the dialog is
+									  //  dismissed with OK
+									  }
+									  else if (nResponse == IDCANCEL)
+									  {
+									  // TODO: Place code here to handle when the dialog is
+									  //  dismissed with Cancel
+									  dlg.exitNouse();
+									  }*/
+}
+
+

@@ -1,0 +1,148 @@
+>>Nouse-PVI configuration-registration data<<
+
+>>Instructions:
+
+- Put this file in the directory from which you will run NousePVI.exe.
+- Read NousePVI-Manual.pdf for further instructions (online at www.ivim.ca/Nouse or www.perceptual-vision.com/Nouse).
+
+========================================================================================
+>>Registration information:
+
+
+Name: TO_BE_EMAILED_TO_YOU
+Email: alexandre.banville@sympatico.ca
+Activation: [;Q_CuaY?C1y
+
+
+========================================================================================
+>>Nouse Settings:
+
+BIG_MOTION_DISABLED_IN_CURSOR_STATE	1
+MOTION_SIZE	30
+ACTIVATE_ASSUMES_HEADWIDTH		0.25
+CONTROL_POINTERCORNER_MOVES 1
+CALIBRATE_AUTOMATIC	1
+CONTROL_NOCHANGE_BACK_TO_RESET 99999
+CONTROL_NOMOTION_BACK_TO_RESET	99999
+CLOSE_CLICK_FOR_BOARD	20
+PCT_STOP_JOYSTICK  	15
+USE_MOUTH_DETECTION	0
+USE_VOICE_COMMANDS	0
+CLICK_ON_COMMAND	1
+LOCK_ON		0
+MOUSELESS_NAV_COMPARISON_TYPE		2
+CountdownConfirmClick		2
+CountdownTime		3
+MinimumMouthClickHeight		3
+ClickBoxSize   1
+CursorShowsFace    1
+MirrorCameraImage    1
+DiscreteDirection 0
+EnableDwellClicking    0
+Lag    0
+AlwaysLeftClick    1
+ProcessLoad    1
+FaceDetectionType    0
+TranslucentCursor =    1
+TranslucenceSolidness =    140
+WebcamIndex =    0
+CursorShowsCountdown =    1
+DiscreteNavType = 0
+DirectMappingRows = 5
+DirectMappingCols = 5
+ShowDiscreteNavRects = 1
+
+>>Nouse-PVI configuration-registration data<<
+=========================================================================================
+JitterThreshold = 1
+NouseCursorInBoard = 1
+
+>>>>>>>>>> Pad config
+TextSizeScale = 3
+
+>> Note: the max BoardCol is 5 && the max BoardRow is 3
+BoardTextScale = 1
+
+>> Activation corner
+>> name				col row
+Activeblock1	=	1	1
+Activeblock2	=	5	1
+Activeblock3	=	1	3
+Activeblock4	=	5	3
+
+
+>>>>> Board Config: 
+
+
+- 	Keyboard Groups
+- Layer 1
+- 	Normal Text
+Group(1,1)	=	a	b	c	d	255	255	255
+Group(1,2)	=	e	f	g	h	255	255	255
+Group(1,3)	=	i	j	k	l	255	255	255
+Group(1,4)	=	o	m	n	p	255	255	255
+Group(1,5)	=	q	r	s	t	255	255	255
+Group(2,1)	=	u	v	w	x	255	255	255
+Group(2,2)	=	y	z	-	.	255	255	255
+Group(2,3)	=	Space	'	Enter	?	255	255	255
+Group(2,4)	=	1	2	3	4	255	255	255
+Group(2,5)	=	5	6	7	8	255	255	255
+Group(3,1)	=	Predict1	Predict2	Predict3	Predict4	255	255	255
+Group(3,2)	=	Shift	[	'	]	255	255	255
+Group(3,3)	=	Clear	<-BKSP	Quit	@	255	255	255
+Group(3,4)	=	ALT	CTRL	Pause	Adv	255	255	255
+Group(3,5)	=	9	0	+	=	255	255	255
+
+- Layer 2
+-	Shift text
+
+ShiftGroup(1,1)	=	A	B	C	D	255	255	255
+ShiftGroup(1,2)	=	E	F	G	H	255	255	255
+ShiftGroup(1,3)	=	I	J	K	L	255	255	255
+ShiftGroup(1,4)	=	O	M	N	P	255	255	255
+ShiftGroup(1,5)	=	Q	R	S	T	255	255	255
+ShiftGroup(2,1)	=	U	V	W	X	255	255	255
+ShiftGroup(2,2)	=	Y	Z	<	>	255	255	255
+ShiftGroup(2,3)	=	Space	&	Enter	!	255	255	255
+ShiftGroup(2,4)	=	~	#	_	$	255	255	255
+ShiftGroup(2,5)	=	+	*	-	%	255	255	255
+ShiftGroup(3,1)	=	Up	Left	Down	Right	255	255	255
+ShiftGroup(3,2)	=	Normal	{	Adv	}	255	255	255
+ShiftGroup(3,3)	=	Clear	Pause	Quit	DEL	255	255	255
+ShiftGroup(3,4)	=	Alt	Fn	Tab	Esc	255	255	255
+ShiftGroup(3,5)	=	PgUp	Home	PgDn	End	255	255	255
+
+- Layer 3
+-	Adv text
+
+AdvGroup(1,1)	=	W-RC1	W-RC2	W-RC3	W-RC4	255	255	255
+AdvGroup(1,2)	=	W-RC5	W-RC6	W-RC7	W-RC8	255	255	255
+AdvGroup(1,3)	=	W-CS1	W-CS2	W-CS3	W-CS4	255	255	255
+AdvGroup(1,4)	=	W-CS5	W-CS6	W-CS7	W-CS8	255	255	255
+AdvGroup(1,5)	=	W-RS1	W-RS2	W-RS3	W-RS4	255	255	255
+AdvGroup(2,1)	=	&	$	{	}	255	255	255
+AdvGroup(2,2)	=	|	Z	,	.	255	255	255
+AdvGroup(2,3)	=	Space	&	Enter	!	255	255	255
+AdvGroup(2,4)	=	~	#	_	$	255	255	255
+AdvGroup(2,5)	=	+	*	-	%	255	255	255
+AdvGroup(3,1)	=	Up	Left	Down	Right	255	255	255
+AdvGroup(3,2)	=	Shift	[	Normal	]	255	255	255
+AdvGroup(3,3)	=	Clear	BSP	Quit	DEL	255	255	255
+AdvGroup(3,4)	=	Alt	Fn	Tab	Esc	255	255	255
+AdvGroup(3,5)	=	PgUp	Home	PgDn	End	255	255	255
+=========================================================================================
+CursorSize 2
+CursorSpeed 3
+CountdownCalibration 3
+CountdownDwell 3
+EnableYellowState  1
+NavigationType 2
+MotionRangeHorizontal  5
+MotionRangeVertical  5
+ResolutionPixels   3
+ResolutionSeconds   1
+ACTIVATE_USES_FACEDETECTION		1
+LightNormalization 0
+EnableAutoRecalibration 1
+EnableSounds 1
+EnableSpecialClicks 0

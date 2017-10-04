@@ -1,0 +1,96 @@
+MAIN_DIALOG_TITLE Nouse Settings
+MAIN_CONTROL_SETTINGS Control Settings
+COUNTDOWN_DWELL_TIME Countdown Dwell Time
+CURSOR_SIZE Cursor Size
+CURSOR_SPEED Cursor Speed
+JOYSTICK_DEFAULT Joystick Default
+DIRECT Direct
+COUNTDOWN_CALIBRATION_TIME Countdown Calibration Time
+ENABLE_YELLOW_STATE Enable Yellow State
+ENABLE_SOUNDS Enable Sounds
+MAIN_RECOGNITION_SETTINGS Recognition Settings
+VERTICAL_RANGE_OF_MOTION Vertical Range of Motion
+HORIZONTAL_RANGE_OF_MOTION Horizontal Range of Motion
+RESOLUTION_IN_PIXELS Resolution in Pixels
+RESOLUTION_IN_SECONDS Resolution in Seconds
+ACTIVATE_USES_FACE_DETECTION Activate Uses Face Detection
+LIGHT_NORMALIZATION Light normalization
+ENABLE_AUTOMATIC_RECALIBRATION Enable Automatic Recalibration
+ADVANCED_SETTINGS_BUTTON Advanced Settings
+SAVE_BUTTON Save
+EXIT_BUTTON Exit
+FILE_MENU File
+LOAD_USERS_FILE_MENU_ITEM Load user's file
+LOAD_DEFAULT_VALUES_INTO_MENU_ITEM Load default values into
+SAVE_AS_MENU_ITEM Save as
+SAVE_MENU_ITEM Save 
+EXIT_MENU_ITEM Exit
+LOAD_FILE_LOCATION_ERROR Unable to read from this file location
+LOAD_IMPROPER_FORMAT_ERROR Unable to read: Improper format
+SAVE_FILE_ERROR Unable to save to this file location
+SAVE_TO_DEFAULT_ERROR_PREFIX Unable to save to
+SAVE_TO_DEFAULT_ERROR_SUFFIX in this directory
+LOAD_DEFAULTS_ERROR_PREFIX Unable to save to
+SAVE_TO Save to
+ADVANCED_SETTINGS_TITLE Advanced Settings
+SAVE_BOARD_ERROR Unable to save to this file location
+USE_VOICE_COMMANDS Use voice commands
+USE_MOUTH_CLICK Use mouth click
+USE_MOUTH_CLICK_TOOL_TIP Click by opening mouth
+MINIMUM_MOUTH_CLICK_HEIGHT Minimum Mouth Click Height
+CLICK_ON_COMMAND Click on command
+CLICK_ON_COMMAND_TOOL_TIP In nouse cursor, if you open mouth or say \click\: 0 means skip countdown. 1 means perform a left click
+ALL_DIRECTIONS All Directions
+EIGHT_DIRECTIONS 8 Directions
+FOUR_DIRECTIONS 4 Directions
+DISCRETE_DIRECTION Discrete Direction
+ENABLE_DWELL_CLICKING Enable Dwell Clicking
+LAG_AVERAGE_POSITION_OVER_TIME Lag (Average position over time)
+ALWAYS_LEFT_CLICK Always Left Click
+ACTIVATE_ASSUMES_HEADWIDTH Activate Assumes Headwidth
+ACTIVATE_ASSUMES_HEADWIDTH_TOOL_TIP If face detection is not used, Nouse zooms in on the centre assuming a headwidth of 25% of image width
+NO_CHANGE_BACK_TO_RESET No change back to reset (Seconds)
+NO_CHANGE_BACK_TO_RESET_TOOL_TIP Automatically go to nose reset if Nouse cursor position doesn't change in this many seconds
+NO_MOTION_BACK_TO_RESET No motion back to reset (Seconds)
+NO_MOTION_BACK_TO_RESET_TOOL_TIP Automatically go to nose reset if No user motion is seen in this many seconds
+CLICK_CALIBRATION_BOX_SIZE Click/Calibration box size
+JOYSTICK_NEUTRAL_ZONE Joystick neutral zone
+JOYSTICK_NEUTRAL_ZONE_TOOL_TIP Percentage of screen that is used for the \stop box\ in joystick mode.
+CLOSE_CLICK_AMOUNT \Close\ Click Amount
+CLOSE_CLICK_AMOUNT_TOOL_TIP How close you have to click to the previous click to be considered a \close\ click.
+COUNTDOWN_CONFIRM_CLICK Countdown Confirm Click
+COUNTDOWN_CONFIRM_CALIBRATION Countdown Confirm Calibration
+CURSOR_LOCATION_RELATIVE_TO_NOUSE_CURSOR Cursor location relative to Nouse Cursor
+CURSOR_LOCATION_RELATIVE_TO_NOUSE_CURSOR_TOOL_TIP 
+TOP_LEFT Top left
+MOVES Moves
+CENTER Center
+CALIBRATE_AUTOMATICALLY Calibrate Automatically
+CALIBRATE_AUTOMATICALLY_TOOL_TIP Unchecked: Countdown while user puts nose in center, Checked: Just guess where nose is after face detection
+BIG_MOTION_INDUCES_CALIBRATION Big Motion Induces Calibration
+BIG_MOTION_SIZE Big Motion Size
+BIG_MOTION_SIZE_TOOL_TIP Motion to be condsidered big: how many pixels have to change (in % of image size)
+CONTROL_SETTINGS_TAB Control Settings
+MIRROR_CAMERA_IMAGE Mirror Camera Image
+CURSOR_SHOWS_FACE Cursor Shows face
+TRANSLUCENT_CURSOR Translucent Cursor
+TRANSLUCENCE_SOLIDNESS Translucence \Solidness\
+TRANSLUCENT_CURSOR_TOOL_TIP The Nouse Cursor will be translucent when in Nouse Cursor or Nouse Board mode.
+TRANSLUCENCE_SOLIDNESS_TOOL_TIP If \Translucent Cursor\ is checked, this determines how solid the translucency is. 0=transparent, 255=completely solid.
+CURSOR_SHOWS_COUNTDOWN Cursor Shows Countdown
+WEBCAM_INDEX Webcam Index
+PROCESS_LOAD_FILTER_NOISE Process Load (Filter Noise)
+FACE_DETECTION_TYPE Face Detection Type
+VISUAL_SETTINGS_TAB Visual Settings
+BOARD_TEXT_SCALE Board Text Scale:
+TEXT_SIZE_SCALE Text Size Scale:
+JITTER_THRESHOLD Jitter Threshold:
+NOUSE_CURSOR_IN_BOARD Nouse Cursor in Board
+CURRENT_LEVEL Current Level:
+LOAD_BOARD_BUTTON Load Board
+SAVE_BOARD_BUTTON Save Board
+BOARD_SETTINGS_TAB Board Settings
+SAVE_BUTTON_ADVANCED Save
+CLOSE_BUTTON_ADVANCED Close
+LOAD_BOARD_ERROR_LOCATION Unable to read from this file location
+LOAD_BOARD_ERROR_FORMAT Unable to read: Improper format

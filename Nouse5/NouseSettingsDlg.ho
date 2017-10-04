@@ -1,0 +1,56 @@
+#pragma once
+#include "StateCursor.h"
+#include "SettingsHandler.h"
+
+// CNouseSettingsDlg dialog
+
+class CNouseSettingsDlg : public CDialog
+{
+	//DECLARE_DYNAMIC(CNouseSettingsDlg)
+
+public:
+	CNouseSettingsDlg(CWnd* pParent = NULL, CStateCursor* p_stateCursor = NULL);   // standard constructor
+	virtual ~CNouseSettingsDlg();
+
+// Dialog Data
+	enum { IDD = IDD_NOUSE_SETTINGS_DLG };
+
+protected:
+
+	virtual BOOL OnInitDialog();
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
+
+	CSettingsHandler m_SettingsHandler;
+	
+	CStateCursor* m_pstateCursor;
+	int m_nCursorSize;
+	int m_nCursorSpeed;
+	int m_nCountdownCalibration;
+	int m_nCountdownDwell;
+	int m_nEnableYellowState;
+	int m_nNavigationType;
+	int m_nMotionRangeHorizontal;
+	int m_nMotionRangeVertical;
+	int m_nResolutionPixels;
+	int m_nResolutionSeconds;
+	int m_nUserFaceDetection;
+	int m_nLightNormalization;
+	int m_nEnableAutoRecalibration;
+	int m_nEnableSounds;
+
+	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnClickedSaveSettingsButton();
+	afx_msg void OnClickedExitButton();
+	afx_msg void OnClickedAdvanceSetttingButton();
+	
+private:
+	CSliderCtrl m_sldr_CursorSize;
+	CSliderCtrl m_sldr_CursorSpeed;
+	CSliderCtrl m_sldr_CountdownCaliberTime;
+	CSliderCtrl m_sldr_CountdownDwellTime;
+	CSliderCtrl m_sldr_VerticalMotionRange;
+	CSliderCtrl m_sldr_HorizontalMotionRange;
+	CSliderCtrl m_sldr_ResolitionPixels;
+	CSliderCtrl m_sldr_ResolitionSeconds;
+};
